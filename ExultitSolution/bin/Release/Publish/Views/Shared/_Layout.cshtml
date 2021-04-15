@@ -1,0 +1,195 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title </title>
+    <meta name="description" content="@ViewBag.Description" />
+    <meta name="google-site-verification" content="T3VyeFgmh6hwe6HuGgsy4InCLCJKXr_wM8DvaTRetVQ" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-191004124-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-191004124-1');
+    </script>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body class="padding-0">
+    <div class="navbar bg-navbar">
+        <div class="container">
+            <div class="navbar-header  navbar-inverse">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="navbar-link">
+                        <a href="tel:+1-586-569-9657" class="a-navbar-link">
+                            <i class="fa fa-phone yellow-icon-navbar" aria-hidden="true"></i>
+                            +1-586-569-9657
+                        </a></li>
+                    <li class="navbar-link">
+                        <a href="mailto:mailto:info@exultitsolution.com" class="a-navbar-link">
+                            <i class="fa fa-envelope yellow-icon-navbar" aria-hidden="true"></i>
+                              info@exultitsolution.com
+                        </a>
+                    </li>
+                    <li class="navbar-link-last"><a href="mailto:mailto:sales@exultitsolution.com" class="a-navbar-link">
+    <i class="fa fa-envelope yellow-icon-navbar" aria-hidden="true"></i>
+
+    sales@exultitsolution.com
+</a></li>
+                    <li>
+                        <a href="/contactus"
+                           class="getquote-navbar"
+>Get a Quote</a>
+                    </li>
+                </ul>
+            </div>
+            </div>
+        </div>
+            <div class="navbar constaint-header-FooterBar">
+                <div class="container pt-top">
+                    <div class="navbar-header margin-nav">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+
+                        <a href="/" ><img src="./image/exultitlogo.png" />    </a>
+                    </div>
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav ul-navbar">
+                            <li class="header-navbar-li">@Html.ActionLink("Home", "", "Home")</li>
+                            <li class="header-navbar-li">@Html.ActionLink("About Us", "aboutus", "Home")</li>
+                            <li class="header-navbar-li">@Html.ActionLink("Our Technologies", "technologies", "Home")</li>
+                            <li class="header-navbar-li-ourservices header-navbar-li">
+                                @Html.ActionLink("Our Services", "website-development", "Home")
+                            <ul id="navbar-collapse-item-our-services">
+                                <li class="list-icon-menu d-block">
+                                    @Html.ActionLink("Website devlopment", "website-development", "Home")
+                                </li>
+                                <li class="list-icon-menu d-block">
+                                    @Html.ActionLink("Cloud services", "cloud-services", "Home")
+                                </li>
+                                <li class="list-icon-menu d-block">
+                                    @Html.ActionLink("Mobile applications", "mobile-app-development", "Home")
+                                </li>
+                                <li class="list-icon-menu d-block">
+                                    @Html.ActionLink("CRM Software Developments", "crm-software-company", "Home")
+                                </li>
+                                <li class="list-icon-menu d-block">
+                                    @Html.ActionLink("ECommerce Web Development", "ecommerce-web-development", "Home")
+                                </li>
+                                <li class="list-icon-menu d-block">
+                                    @Html.ActionLink("Search Engine Optimization", "seo", "Home")
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="header-navbar-li">@Html.ActionLink("Contact Us", "contactus", "Home")</li>
+                        <li class="header-navbar-li">@Html.ActionLink("Blog", "blog", "Home")</li>
+                        <li class="header-navbar-li">@Html.ActionLink("Remote Staff", "remotestaff", "Home")</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="">
+                @RenderBody()
+                </div>
+    <div>
+                <footer class="footer-bg">
+                    <div class="footer-bg-overlay">
+                        <div class="container">
+                            <div class="row mt-50">
+                                <div class="col-md-4 col-xs-12">
+                                    <h3>About Information</h3>
+                                    <p class="footer-p">
+                                        Exult IT Solution for IT Solutions is available to help you with the needs of the business in this technology-oriented global world. It provides a range of services from website and software development to IT consulting. Exult IT Solution for IT Solutions maintains a very prestigious position in the tech world in terms of its services.
+                                    </p>
+                                </div>
+                                <div class="col-md-4 col-xs-12">
+                                    <h3>Helpful services</h3>
+                                    <ul class="ul-footer">
+                                        <li class="li-footer">
+                                            <i class="fa fa-angle-right padding-3" aria-hidden="true"></i><a href="/aboutus" class="mdblink-menu">About us</a>
+                                        </li>
+                                        <li class="li-footer">
+                                            <i class="fa fa-angle-right padding-3" aria-hidden="true"></i><a class="mdblink-menu" href="/website-development">Website devlopment</a>
+                                        </li>
+                                        <li class="li-footer">
+                                            <i class="fa fa-angle-right padding-3" aria-hidden="true"></i><a class="mdblink-menu" href="/cloud-services"> Cloud services</a>
+                                        </li>
+                                        <li class="li-footer">
+                                            <i class="fa fa-angle-right padding-3" aria-hidden="true"></i><a class="mdblink-menu" href="/mobile-app-development"> Mobile applications</a>
+                                        </li>
+                                        <li class="li-footer">
+                                            <i class="fa fa-angle-right padding-3" aria-hidden="true"></i><a class="mdblink-menu" href="/crm-software-company"> CRM Software Development</a>
+                                        </li>
+                                        <li class="li-footer">
+                                            <i class="fa fa-angle-right padding-3" aria-hidden="true"></i><a class="mdblink-menu" href="/ecommerce-web-development"> ECommerce Web Development</a>
+                                        </li>
+                                        <li class="li-footer">
+                                            <i class="fa fa-angle-right padding-3" aria-hidden="true"></i><a class="mdblink-menu" href="/seo"> Search Engine Optimization</a>
+                                        </li>
+                                        <li class="li-footer">
+                                            <i class="fa fa-angle-right padding-3" aria-hidden="true"></i><a href="/contactus" class="mdblink-menu"> Contact us</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-4 col-xs-12">
+                                    <h3>Contact Us</h3>
+                                    <ul class="list-inline form-inline">
+                                        <li>
+                                            <div class="container-fluid">
+                                                <div class="row d-flex">
+                                                    <div class="col-md-1 left">
+                                                        <i class="fa fa-phone fa-2x  blue-icon-footer" aria-hidden="true"></i>
+                                                    </div>
+                                                    <div class="col-md-11">
+                                                        <p>Phone</p>
+                                                        <p><a href="tel:+1-586-569-9657" class="a-footer">+1-586-569-9657</a></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="li-footer-below-li"></li>
+                                        <li>
+                                            <div class="container-fluid">
+                                                <div class="row d-flex">
+                                                    <div class="col-md-1 left">
+                                                        <i class="fa fa-envelope fa-2x  blue-icon-footer" aria-hidden="true"></i>
+                                                    </div>
+                                                    <div class="col-md-11">
+                                                        <p>Email</p>
+                                                        <p><a href="mailto:mailto:info@exultitsolution.com" class="a-footer">info@exultitsolution.com</a></p>
+                                                        <p><a href="mailto:mailto:sales@exultitsolution.com" class="a-footer">sales@exultitsolution.com</a></p>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="li-footer-below-li"></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottomdiv_Footer">
+                        <p class="bottomdiv_p_Footer"><a href="/" class="bottomdiv_span_Footer" >Exult IT Solution</a> - Copyright 2020.</p>
+                    </div>
+                </footer>
+            </div>
+
+            @Scripts.Render("~/bundles/jquery")
+            @Scripts.Render("~/bundles/bootstrap")
+            @RenderSection("scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,109 @@
+﻿@helper divicon()
+{
+    <button class="button-free-councelling-services" id="button1" onclick="DisplayReuest()"><i class="fa fa-calendar" aria-hidden="true"></i></button>
+}
+
+<div>
+    <div id="snackbarSuccess">Enter user name.</div>
+    <div id="snackbarError">Something went wrong.</div>
+    <div id="snakbarName">Enter user name.</div>
+    <div id="snakbarEmail">Enter email and it should be in correct format as 'xyz@abc.com/in/org'.")</div>
+    <div id="snakbarMessage">Enter message.</div>
+    <div id="snakbarPhone">"Enter phone number and it contains only 10 digit number.</div>
+
+    <button id="buttonfreecouncellingeservices" onclick="DisplayReuest()"><i class="fa fa-calendar" aria-hidden="true"></i></button>
+    <div class="div-request-mail">
+        <Paper>
+            <h3 class="h3-request-homebar-services">Request a free Consultation</h3>
+            <div class="request-div-home">
+                <div class="row row-width-100">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <input type="text" id="Name" class="input-request-home-services" placeholder="Your name" />
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="Email" class="input-request-home-services" placeholder="Email address" />
+                        </div>
+                        <div class="form-group">
+                            <input type="number" id="Phone" min="10" max="10" maxlength="10" class="input-request-home-services" placeholder="Phone number" />
+                        </div>
+                        <div class="form-group">
+                            <textarea class="textarea-request-home-services" id="Message" placeholder="Your message"></textarea>
+                        </div>
+                        <button color="primary" rounded class="inquirybtn-home-services" onclick="Save()">Send Inquiry</button>
+                    </div>
+                </div>
+            </div>
+        </Paper>
+    </div>
+</div>
+
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+<script type="text/javascript"> 
+    var productIndex ="0";
+    function DisplayReuest() {
+        if (productIndex == "0") {
+            var dr = document.getElementById("buttonfreecouncellingeservices");
+            dr.className = dr.className.replace("show", "");
+            dr.className = "show";
+            productIndex = "1";
+        }
+        else {
+             var dr = document.getElementById("buttonfreecouncellingeservices");
+            dr.className = dr.className.replace("", "");
+            dr.className = "";
+            productIndex = "0";
+        }
+    }
+    function Save() {
+        var er = document.getElementById("snackbarError");
+        var s = document.getElementById("snackbarSuccess");
+        var n = document.getElementById("snakbarName");
+        var m = document.getElementById("snakbarMessage");
+        var e = document.getElementById("snakbarEmail");
+        var p = document.getElementById("snakbarPhone");
+        setTimeout(function () { er.className = er.className.replace("show", ""); }, 3000);
+        setTimeout(function () { s.className = s.className.replace("show", ""); }, 3000);
+        setTimeout(function () { n.className = n.className.replace("show", ""); }, 3000);
+        setTimeout(function () { e.className = e.className.replace("show", ""); }, 3000);
+        setTimeout(function () { m.className = m.className.replace("show", ""); }, 3000);
+        setTimeout(function () { p.className = p.className.replace("show", ""); }, 3000);
+        if ((document.getElementById("Name")).value == null || (document.getElementById("Name")).value == "") {
+            n.className = "show";
+            return;
+        }
+        else if ((document.getElementById("Message")).value == null || (document.getElementById("Message")).value == "") {
+            m.className = "show";
+            return;
+        }
+        else if ((document.getElementById("Email")).value == null || (document.getElementById("Email")).value == "") {
+            e.className = "show";
+            return;
+        }
+        else if ((document.getElementById("Phone")).value == null || (document.getElementById("Phone")).value == "") {
+            p.className = "show";
+            return;
+        } debugger
+        let url = "https://exultitsolution.com/exultitapi/email/SendMail";
+        let users = {
+            usermessage: (document.getElementById("Message")).value,
+            username: (document.getElementById("Name")).value,
+            useremail: (document.getElementById("Email")).value,
+            userphone: (document.getElementById("Phone")).value,
+            Useroptions: ""
+        };
+
+        axios({
+            method: 'post',
+            url: url,
+            data: users
+        }).then
+            (data => {
+                s.className = "show";
+            }).catch(err =>
+                er.className = "show")
+
+    }
+</script>

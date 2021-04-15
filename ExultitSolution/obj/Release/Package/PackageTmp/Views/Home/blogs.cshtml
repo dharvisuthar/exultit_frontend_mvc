@@ -1,0 +1,45 @@
+﻿@{
+    ViewBag.Title = "";
+    ViewBag.Description = "";
+}
+@helper cardDivCol(string img, string title, string text, string url)
+{
+    <div class="col-md-4 second-menubar-col-home">
+        <div class="card width-menubar-home">
+            <div class="style-cardmedia-div-home">
+                <img src="./image/@img" class="style-cardimage-home" waves />
+            </div>
+            <div class="card-body">
+                <div class="card-title second-menubar-title-home">@title</div>
+                <p class="card-text second-menubar-text"> @text</p>
+                <a class="second-menu-btn-home-a" href="/@url">
+                    <button class="second-menu-btn-home" color="primary" rounded>
+                        Know more
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+}
+<div class="maindiv_width">
+    <div class="header_blog">
+        <div class="header_AboutUs_Overlay">
+            <div class="header_AboutUs_Overlay_inner header_AboutUs_Overlay_inner1">
+                <h1 class="header_h1_AboutUs">Blog</h1>
+                <h4 class="header_h4_AboutUs">Helping you build</h4>
+                <div class="header_breadcrumb_AboutUs"> <a class="menu-navgate-home" href="/">Home</a> <span class="header-line-home">-</span> <span>Blog</span></div>
+            </div>
+        </div>
+    </div>
+    <div class="constaintBlogBar">
+        <div class="heading_blog blog_heading">
+            <div class="second-menubar">
+                <div class="row">
+                    @cardDivCol("blog1.jpg", "8 Effective Digital ways to improve your business", "If business administration’s need advanced promoting, they can get customers by reference from relatives, companions, current customers, and mouth exposure. Sometimes, every business needs some showcasing, whether it's a Profession, maker, Service supplier, Wholesaler, nearby shop, etc. With the showcasing of expert services, they can discover them from a Search motor, Social media stage or an ad, or some online reference destinations.", "effective-digital-ways-to-improve-your-business")
+                    @cardDivCol("topreasonselctexultit.jpg", "Why should 'ExultIt Solution' be your Digital media partner for the ULTIMATE business growth?", "In such a market, it might seem hard to figure out who to choose for your organization's projects, as it is a tedious process to fulfil the different sorts of your digital needs and the ideal approach for them.", "top-reason-to-select-exultit")
+                    @cardDivCol("top_6_mobile_App_developement_trends_2021.png", "Top 6 Mobile App Development Trends for 2021", "From the time when smartphones were introduced in the market or in the technological field, they only evolved. It is no longer a luxury to have a smartphone, but it has become necessary for all fields like education, business, gaming, and traveling.", "top-6-mobile-app-developement-trends-for-2021")
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

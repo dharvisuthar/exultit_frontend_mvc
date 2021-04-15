@@ -1,0 +1,144 @@
+﻿@{
+    ViewBag.Title = "IT Solutions Provider Macomb |Web Design and Development Company Macomb";
+    ViewBag.Description = "Welcome to the Exult It solution Macomb, we provide best software development services, website design and development services, ecommerce website development.";
+}
+
+<div>
+    <div class="maindiv_width">
+        <div id="snackbarSuccess">Enter user name.</div>
+        <div id="snackbarError">Something went wrong.</div>
+        <div id="snakbarName">Enter user name.</div>
+        <div id="snakbarEmail">Enter email and it should be in correct format as 'xyz@abc.com/in/org'.")</div>
+        <div id="snakbarMessage">Enter message.</div>
+        <div id="snakbarPhone">"Enter phone number and it contains only 10 digit number.</div> <div class="header_ContactUs">
+            <div class="header_AboutUs_Overlay">
+                <div class="header_AboutUs_Overlay_inner header_AboutUs_Overlay_inner_contact">
+                    <h1 class="header_h1_AboutUs">Contact us</h1>
+                    <h4 class="header_h4_AboutUs">We are happy to connect you!</h4>
+                    <div class="header_breadcrumb_AboutUs"> <a class="menu-navgate-home" href="/">Home</a> <span class="header-line-home">-</span> <span>Contact us</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="constaintContactBar">
+            <div class="constaintContactBar_sec">
+                <div class="container">
+                    <div class="row row_about_whychooseus row_about_contactus-map">
+                        <div class="row_inner_col_contact">
+                            <div>
+                                <h2 class="col_contact_h2">Get in Touch</h2>
+                                <p class="col_contact_p">
+                                    Please feel free to contact us.
+                                </p>
+                                <div class="div_innercol_contact">
+                                    <div class="div_innercol_div_contact">
+                                        <div class="row">
+                                            <div class="col-md-6 d-flex">
+                                                <div>
+                                                    <i class="fa fa-phone fa-2x icons-style" aria-hidden="true"></i>
+                                                </div>
+                                                <div>
+                                                    <p class="li-p-footer">Phone</p>
+                                                    <p><a style={styles.alink} href="tel:+1-330-550-4622">+1 586-569-9657</a></p>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 d-flex">
+                                                <div>
+                                                    <i class="fa fa-envelope fa-2x icons-style" aria-hidden="true"></i>
+
+                                                </div>
+                                                <div>
+                                                    <p class="li-p-footer">Email</p>
+                                                    <p><a style={styles.alink} href="mailto:mailto:info@exultitsolution.com">info@exultitsolution.com</a></p>
+                                                    <p><a style={styles.alink} href="mailto:mailto:sales@exultitsolution.com">sales@exultitsolution.com</a></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="div_question_inner">
+                    <h1 class="h1_question">Have Any Question?</h1>
+                    <p class="p_question">Looking for Exclusive Digital Services?</p>
+                </div>
+                <div class="height_component_question">
+                    <label class="label_component_question">Service you are looking for?<span class="text-danger"> *</span></label>
+                    <select class="select_question_div" name='selectoption' id="selectoption">
+                        <option value="Select" selected>Select</option>
+                        <option value="Web Design">Web Design</option>
+                        <option value="SEO & Marketing">SEO & Marketing</option>
+                        <option value="PPC / Google Adwords">PPC / Google Adwords</option>
+                        <option value="Branding">Branding</option>
+                        <option value="Video Production">Video Production</option>
+                        <option value="eCommerce">eCommerce</option>
+                        <option value="Social Media Marketing">Social Media Marketing</option>
+                    </select>
+                    <textarea class="textarea_question_div" id="Message" placeholder="Your message">
+            </textarea>
+                    <div class="margin-contact">
+                        <input class="input_question_div" id="Name" placeholder="Your name"></input>
+                        <input class="input_question_div" id="Email" type="email" placeholder="Email address"></input>
+                        <input class="input_question_div_sec" id="Phone" type="number"maxlength="10" max="10" min="10" placeholder="Phone number"></input>
+                    </div>
+                </div>
+                <div class="btn_input_question_div_sec">
+                    <button class="btn_question_div" onclick="Save()">Get in touch</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script type="text/javascript">
+    function Save() {
+        var er = document.getElementById("snackbarError");
+        var s = document.getElementById("snackbarSuccess");
+        var n = document.getElementById("snakbarName");
+        var m = document.getElementById("snakbarMessage");
+        var e = document.getElementById("snakbarEmail");
+        var p = document.getElementById("snakbarPhone");
+        setTimeout(function () { er.className = er.className.replace("show", ""); }, 3000);
+        setTimeout(function () { s.className = s.className.replace("show", ""); }, 3000);
+        setTimeout(function () { n.className = n.className.replace("show", ""); }, 3000);
+        setTimeout(function () { e.className = e.className.replace("show", ""); }, 3000);
+        setTimeout(function () { m.className = m.className.replace("show", ""); }, 3000);
+        setTimeout(function () { p.className = p.className.replace("show", ""); }, 3000);
+        if ((document.getElementById("Name")).value == null || (document.getElementById("Name")).value == "") {
+            n.className = "show";
+            return;
+        }
+        else if ((document.getElementById("Message")).value == null || (document.getElementById("Message")).value == "") {
+            m.className = "show";
+            return;
+        }
+        else if ((document.getElementById("Email")).value == null || (document.getElementById("Email")).value == "") {
+            e.className = "show";
+            return;
+        }
+        else if ((document.getElementById("Phone")).value == null || (document.getElementById("Phone")).value == "") {
+            p.className = "show";
+            return;
+        } debugger
+        let url = "https://exultitsolution.com/exultitapi/email/SendMail";
+        let users = {
+            usermessage: (document.getElementById("Message")).value,
+            username: (document.getElementById("Name")).value,
+            useremail: (document.getElementById("Email")).value,
+            userphone: (document.getElementById("Phone")).value,
+            Useroptions: (document.getElementById("selectoption")).value
+        };
+        axios({
+            method: 'post',
+            url: url,
+            data: users
+        }).then
+            (data => {
+                s.className = "show";
+            }).catch(err =>
+                er.className = "show")
+    }
+</script>

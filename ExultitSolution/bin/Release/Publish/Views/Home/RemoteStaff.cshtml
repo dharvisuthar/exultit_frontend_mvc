@@ -1,0 +1,119 @@
+﻿@{
+
+    ViewBag.Title = "RemoteStaff";
+}
+@helper remoteteam_why(string title, string desc)
+{
+    <ul>
+        <li>
+            <p class="col_about_p">
+                <span class="text_bold">@title</span>
+            </p>
+        </li>
+        <p class="col_about_p">@desc</p>
+    </ul>
+}
+@helper remotestaffYelow(string heading)
+{
+    <div class="col-md-3 col_remotestaff-yellow">
+        <h3>@heading</h3>
+    </div>
+}
+@helper remotestaffBlue(string heading)
+{
+    <div class="col-md-3 col_remotestaff-blue">
+        <h3>@heading</h3>
+    </div>
+}
+<div>
+    <div class="maindiv_width">
+        <div class="header_RemoteStaff">
+            <div class="header_AboutUs_Overlay">
+                <div class="header_RemoteStaff_Overlay_inner header_RemoteStaff_Overlay_inner_about">
+                    <h1 class="header_h1_AboutUs">Find the Perfect Remote Staff</h1>
+                    <h4 class="header_h4_AboutUs">Need help with your company's staffing needs?</h4>
+                    <div class="header_breadcrumb_AboutUs"> <a class="menu-navgate-home" href="/">Home</a> <span class="header-line-home">-</span> <span>Remote Staff</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="constaintHomeBar">
+            <div class="constaintHomeBar_sec ">
+                <div class="constaintHomeBar_sec_center ">
+                    <h3 class="constaintHomeBar_sec_h3">Are you struggling to find the right talent for the job? </h3>
+                    <h3 class="constaintHomeBar_sec_h3">Finding it difficult to grow your business?</h3>
+                    <h3 class="constaintHomeBar_sec_center_h3"><span class="font-weight-600">EXULT IT</span> is the <span class="font-weight-600">SOLUTION.</span></h3>
+                </div>
+            </div>
+            <div class=" padding-20">
+                <p class="col_about_p">
+                    Our dedicated team of experts makes it easy for you to cherry-pick the finest of talents from across the globe so that you can stay carefree of all the daily tasks of your business and focus on increasing your ROI.
+                </p>
+                <p class="col_about_p">
+                    We offer <span class="font-weight-600">Remote Staffing</span> services which can help you grow your business and compete with the best of them.
+                </p>
+                <p class="col_about_p">
+                    Get access to dedicated remote staff at an affordable price that’s been evaluated by us so you don’t have to do it yourself.
+                </p>
+            </div>
+            <div class=" padding-20">
+                <div class="text-col-head-remotestaff">
+                    <div class="center-remte-staff">
+                        <h3 class="col_about_h3">Pick the best in any Domain-</h3>
+                        <h3 class="constaintHomeBar_sec_h3">We'll get you the perfect team, on time and within your budget.</h3>
+                    </div>
+                    <MDBContainer>
+                        <MDBRow class="row_about_whychooseus">
+                            @remotestaffBlue("IT Sector")
+                            @remotestaffYelow("Graphic Designing")
+                            @remotestaffBlue("Mobile and Web Development")
+                            @remotestaffYelow("CRM Software Development")
+                            @remotestaffYelow("IT and Tech Support")
+                            @remotestaffBlue("Accounting and Finance")
+                            @remotestaffYelow("Virtual Assistant")
+                            @remotestaffBlue("Content Writing")
+                            @remotestaffBlue("Multimedia and Animation")
+                            @remotestaffYelow("Digital Marketing")
+                            @remotestaffBlue("Data Entry")
+                            @remotestaffYelow("HR and Recruitment")
+                        </MDBRow>
+                    </MDBContainer>
+                    <div class="txt-left-remte-staff">
+                        And a lot more…
+                    </div>
+                </div>
+                <div class=" padding-20">
+                    <h3 class="col_blog_h3 font-weight-600">A Remote Team- WHY?</h3>
+                    @remoteteam_why("Access to a wider pool of talent-", "As you get access to a global workforce, there is no limit to talent and diversity you can achieve in your team")
+                    @remoteteam_why("Reduced office costs-", "You won’t need to increase your office space to accommodate your employees. Hence, you can say goodbye to ever-increasing office/ rental space costs.")
+                    @remoteteam_why("Saves time-", "No need to travel, no unnecessary office gossips. Pure focus on getting the work done. ")
+                    @remoteteam_why("Fewer employee costs-", "Depending on your company’s norms, you can save a lot on payroll expenditures, documentation, employee assistances, various taxes, insurances, etc. to name a few. ")
+                    @remoteteam_why("Increased flexibility & scalability-", "You can easily hire a remote employee as per your needs, any time. Hourly or project-based, the choice is yours to make. It also becomes easier to scale your operations across a wider geographic region/market. ")
+                </div>
+                <div class="center-remte-staff  padding-20">
+                    <h3 class="col_blog_h3 font-weight-600">WE, Exult IT Solutions, FOR YOU-</h3>
+                    <p>Whether you are an upcoming next-door small business or a tech start-up with several rounds of funding, remote staffing is the best way to stay ahead of all the daily problems the business throws at you. </p>
+                    <p> With over 10 years of experience in providing expert business solutions, we know what it takes to build a successful remote staffing team. Our services are tailored to your needs and designed for long-term success.</p>
+                    <p> <span class="font-weight-600">Hire the best people to do the job</span> for you so you can fully focus on your business going forward. </p>
+                </div>
+                <div class="center-remte-staff  padding-20">
+                    <h3 class="col_blog_h3 font-weight-600">START HIRING in these simple STEPS-</h3>
+                    @remoteteam_why("What do you NEED?", "We offer a variety of remote staffing services, including project-based staff augmentation and dedicated teams.")
+                    @remoteteam_why("Choose your SERVICE TYPE", "Get the best cost-effective solution for your needs with one of our flexible options.")
+                    @remoteteam_why("Select your TEAM SIZE", "Project-based or full-time? Our experts will find the perfect match for you in no time!")
+                    @remoteteam_why("CONNECT with us to GET GOING", "Simply reach out to us and get started today!")
+                </div>
+            </div>
+            <div>
+            </div>
+        </div>
+    </div>
+    <div class="bg-blue">
+        <div class="bg-bottom-remote-staff">
+            <h1 class="h1-rmote-staff-bt">
+                HIRE AN <span class="h1-rmote-staff-yelow">EMPLOYEE</span> WITH US and become a part of our long list of happy clients
+                that have <span class="h1-rmote-staff-yelow">grown</span> their <span class="h1-rmote-staff-yelow">business</span> with us!!
+
+            </h1>
+        </div>
+    </div>
+</div>

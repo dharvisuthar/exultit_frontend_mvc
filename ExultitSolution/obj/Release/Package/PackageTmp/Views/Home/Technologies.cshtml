@@ -1,0 +1,92 @@
+﻿@{
+    ViewBag.Title = "Exult it Solution -IT Solutions Macomb |Latest Technologies Update - Exult it Solution";
+    ViewBag.Description = "Highly experienced and professional IT support and solutions in Macomb, Contact more details for web design and development with latest technologies.";
+}
+@helper RedDiv(string icon, string title)
+{<div class="col-md-3 col_Tech">
+        <div class="col_tech_Red">
+            <div class="icon_tech_div">
+                <i class="@icon icon_style_tech" aria-hidden="true"></i>
+            </div>
+            <h4 class="h4_icon_tech">@title</h4>
+        </div>
+    </div>
+}
+@helper BlueDiv(string icon, string title)
+{<div class="col-md-3 col_Tech">
+        <div class="col_tech_Blue">
+            <div class="icon_tech_div">
+                <i class="@icon icon_style_tech" aria-hidden="true"></i>
+            </div>
+            <h4 class="h4_icon_tech">@title</h4>
+        </div>
+    </div>
+}
+@helper GreenDiv(string icon, string title)
+{<div class="col-md-3 col_Tech">
+        <div class="col_tech_Green">
+            <div class="icon_tech_div">
+                <i class="@icon icon_style_tech" aria-hidden="true"></i>
+            </div>
+            <h4 class="h4_icon_tech">@title</h4>
+        </div>
+    </div>
+}
+@helper YellowDiv(string icon, string title)
+{<div class="col-md-3 col_Tech">
+        <div class="col_tech_Yellow">
+            <div class="icon_tech_div">
+                <i class="@icon icon_style_tech" aria-hidden="true"></i>
+            </div>
+            <h4 class="h4_icon_tech">@title</h4>
+        </div>
+    </div>
+}
+<div class="maindiv_width">
+    <div>
+        <div class="header_OurTechnology">
+            <div class="header_AboutUs_Overlay">
+                <div class="header_AboutUs_Overlay_inner header_AboutUs_Overlay_inner_tech">
+                    <h1 class="header_h1_AboutUs">Our Technologies</h1>
+                    <h4 class="header_h4_AboutUs">Best Technologies</h4>
+                    <div class="header_breadcrumb_AboutUs"> <a class="menu-navgate-home" href="/">Home</a> <span class="header-line-home">-</span> <span>Our Technologies</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="constaintHomeBar minheight-6000">
+            <div class="constaintHomeBar_sec">
+                <div class="constaintHomeBar_sec_center">
+                    <h3 class="constaintHomeBar_sec_center_h3">
+                        Your idea, our expert hands makes the product success. We have expert hand in multiple technology.
+                    </h3>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row row_Tech">
+                    @RedDiv("fa fa-apple", "ios")
+                    @BlueDiv("fa fa-android", "Android")
+                    @GreenDiv("fa fa-windows", "Windows")
+                    @YellowDiv("fa fa-server", "SQL Server")
+                    @YellowDiv("fa fa-star", "React Js")
+                    @GreenDiv("fa fa-adn", "Angular 7")
+                    @BlueDiv("fa fa-object-group", "Node Js")
+                    @RedDiv("fa fa-code", "C Sharp")
+                    @RedDiv("fa fa-html5", "HTML 5")
+                    @BlueDiv("fa fa-css3", "CSS 3")
+                    @GreenDiv("fa fa-desktop", "Asp.net MVC 5")
+                    @YellowDiv("fa fa-file-code-o", "Asp.net Core")
+                    @YellowDiv("fa fa-amazon", "AWS Services")
+                    @GreenDiv("fa fa-linux", "Linux Server")
+                    @BlueDiv("fa fa-object-ungroup", "Odoo")
+                    @RedDiv("fa fa-th-large", "Nope Commerce")
+                    @RedDiv("fa fa-file-image-o", "Graphic Design")
+                    @BlueDiv("fa fa-paypal", "Paypal")
+                    @GreenDiv("fa fa-cc-stripe", "Stripe")
+                    @YellowDiv("fa fa-credit-card", "Braintree")
+                </div>
+            </div>
+            <div>
+            </div>
+        </div>
+    </div>
+</div>

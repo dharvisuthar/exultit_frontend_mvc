@@ -1,0 +1,231 @@
+﻿@{
+    ViewBag.Title = "Top Managed IT Services Macomb | Best IT Company in Macomb -Exult it Solution";
+    ViewBag.Description = "Exult it Solution is leading company provides IT services and solutions, we expert in web design and development, software development, cloud computing and SEO services.";
+}
+
+@helper cardDiv(string img, string title, string desc, string url)
+{
+    <div class=" second-menubar-col-home">
+        <div class="card width-menubar-home">
+            <div class="style-cardmedia-div-home">
+                <img src="./image/@img" class="style-cardimage-home" waves />
+            </div>
+            <div class="card-body">
+                <div class="card-title second-menubar-title-home">@title</div>
+                <p class="card-text second-menubar-text">
+                    @desc
+                </p>
+                <a class="second-menu-btn-home-a" href="/@url">
+                    <button class="second-menu-btn-home" color="primary" rounded>
+                        Learn more
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+}
+@helper whyAboutSection(string icon, string title, string desc)
+{
+    <div class="md-col-6 col-xs-12 small-div-wel-home">
+        <div class="small-div-wel-one-home mdcol-working-inner-div-home">
+            <a href="/aboutus" class="txt-decoration-none">
+                <i class="@icon fa-2x icons-welcome-home" aria-hidden="true"></i>
+            </a>
+        </div>
+        <div class="small-div-wel-two-home">
+            <h3 class="small-div-wel-h3-home">@title</h3>
+            <p class="small-div-wel-p-home">@desc</p>
+            <a href="/aboutus" class="small-div-wel-a-home">
+                Get Service    <i class="fa fa-angle-right farightangle-home" aria-hidden="true"></i>
+            </a>
+        </div>
+    </div>
+}
+@helper workingColDiv(string icon1, string title, string desc)
+{
+    <div class="col-md-3 col-xs-12 float-left text-center">
+        <div>
+            <div class="mdcol-working-inner-div-home">
+                <a href="/" class="txt-decoration-none">
+                    <i class="@icon1 fa-2x icons-work-home" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+        <div>
+            <h3 className="mdcol-working-innerdiv-h3-home">@title</h3>
+            <p className="mdcol-workingdiv-innerdiv-p-home">@desc</p>
+        </div>
+    </div>
+}
+
+<div class="maindiv_width">
+    <div class="">
+        <div id="snackbarSuccess">Enter user name.</div>
+        <div id="snackbarError">Something went wrong.</div>
+        <div id="snakbarName">Enter user name.</div>
+        <div id="snakbarEmail">Enter email and it should be in correct format as 'xyz@abc.com/in/org'.")</div>
+        <div id="snakbarMessage">Enter message.</div>
+        <div id="snakbarPhone">"Enter phone number and it contains only 10 digit number.</div>
+        <div id="imageCarousel" class="carousel slide" data-interval="2000"
+             data-ride="carousel" data-pause="hover" data-wrap="true">
+            <ol class="carousel-indicators">
+                <li data-target="#imageCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#imageCarousel" data-slide-to="1"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="./image/exultit-slider1.jpg" class="img-responsive">
+                    <div class="carousel-caption">
+                        <h3></h3>
+                        <p class="carousel-title">
+                            IT SOLUTIONS AND SERVICES
+
+                            <br />                            LET’S WORK TOGETHER AND MAKE <span class="text-red">IT</span> HAPPEN
+                        </p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="./image/slider2.jpg" class="img-responsive">
+                    <div class="carousel-caption">
+                        <h3></h3>
+                        <p class="carousel-title">
+                            ENABLING GLOBAL ENTERPRISES TO<br />
+                            ACHIEVE THEIR MAXIMUM POTENTIAL
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <a href="#imageCarousel" class="carousel-control left" data-slide="prev">
+                <i class="fa fa-chevron-left slider-icon" aria-hidden="true"></i>
+            </a>
+            <a href="#imageCarousel" class="carousel-control right" data-slide="next">
+                <i class="fa fa-chevron-right slider-icon" aria-hidden="true"></i>
+            </a>
+        </div>
+        <div class="home-firstdiv-col">
+            <div class="height-request">
+                <div class="request-homebar">
+                    <div class="h3-request-overlay">
+                        <div>
+                            <div class="angle-div"></div>
+                            <FaEdit class="icon-align-center-request" />
+                            <h3 class="h3-request-homebar">Request a free Consultation</h3>
+                            <div class="request-div-home">
+                                <div class="row width-100">
+                                    <div class="col-md-6 first-col-request-home">
+                                        <div class="form-group">
+                                            <input type="text" id="Name" class="input-request-home" placeholder="Your name" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="email" id="Email" class="input-request-home" placeholder="Email address" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="number" id="Phone" maxlength="10" class="input-request-home" max="10" min="10" placeholder="Phone number" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 homebar-second-col">
+                                        <textarea class="textarea-request-home" id="Message" placeholder="Your message"></textarea>
+                                        <button color="primary" rounded class="inquirybtn-home" onclick="Save()">Send Inquiry</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="second-menubar">
+                <div class="container">
+                    <div class="row">
+                        @cardDiv("ecommerceweb.jpg", "Website Development", "Exult It Solution for IT Solutions has all services required to start or optimize your website. We develop dynamic and static websites to maximize business functionality. We have a vast amount of knowledge with a highly educated and diverse team with many years of combined expertise. We have responsive, custom software development and designs and have the ability to perform on all different devices.", "website-development")
+                        @cardDiv("cloudserices.jpg", "Cloud Services", "We enhance your business through all phases of your cloud adoption. We set up your cloud with data services, cloud services, security services and IT Services. Our cloud services for IT Services allow your potential and current clients to access your website portal via the internet.", "cloud-services")
+                        @cardDiv("mobileapp.jpg", "Mobile Applications", "We have expert and adaptive technology on Mobile Applications. The Mobile Applications are continuously evolving and creating an essential requirement to upgrade your current mobile applications for the business. We propel your imagination to reality by using Big Data!", "mobile-app-development")
+                        @cardDiv("crmsystem.jpg", "CRM Software Development", " CRM is providing a seamless CUSTOMER EXPERIENCE. By creating a deeper level of relationship with your clients, your business can easily lead to sustainable growth and profit. A custom CRM software that is suited to the needs of your business helps in smooth interaction between various units related to the customer’s journey- from sales and marketing to customer service.", "crm-software-company")
+                        @cardDiv("ecommecedevlopment.jpg", "ECommerce Web Development", "Everything you buy or sell online is a part of e-commerce. This ELECTRONIC COMMERCE industry has grown to become the nucleus of every successful business strategy today. Having an e-commerce platform for your business facilitates easier product discovery and a smoother customer’s journey.  Selling online has enabled numerous corporations and businesses to upscale which was not nearly possible through offline trade.", "ecommerce-web-development")
+                        @cardDiv("search_engine_optimization.jpg", "Search Engine Optimization", "Search Engine Optimization is all about knowing and implementing what can make your website visible. It focuses on attracting visitors organically by ranking higher in Google searches. This can be achieved through optimizing your website and content according to several factors that affect the rankings.", "seo")
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container third-welbar-home">
+            <div class="row">
+                <div class="col-md-7 float-left" ">
+                    <h1 class="h1-welbar-home">Exult it solution</h1>
+                    <p class="p-welbar-home">Exult IT Solutions for IT Solutions has professional experience in providing IT solutions for over two decades. Our team of tech experts has constantly engaged with clients to offer a variety of innovative solutions across various verticals. We provide our proficient services for IT Services in website development and designing, along with other services which include extensive technology development, artificial intelligence, augmentation intelligence, custom CRM software development, and mobile applications. We carefully analyze the needs of our clients and offer solutions that are tech-oriented and feature-driven. Along with the functionality-focused approach and innovative implementation, we try to deliver and maintain a healthy and thriving collaboration with you. Our proven track record over the years make us a reliable option for IT Services and IT Solutions. We promise you a very delightful experience and a full customer commitment throughout our relationship.</p>
+                    @whyAboutSection("fa fa-suitcase", "Why choose us", "Let's make your own Business")
+                    @whyAboutSection("fa fa-rocket", "Our mission", "Technology move people")
+                    @whyAboutSection("fa fa-phone", "Get Support", "Create your own website")
+                    @whyAboutSection("fa fa-eye", "Our vision", "Let's make your own Business")
+                </div>
+                <div class="col-md-5 float-left">
+                    <div class="style-cardmedia-div-home">
+                        <img src="./image/welcome_mission.jpg" class="style-cardimage-wel-home" waves />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container forth-working-home">
+            <div class="row">
+                <div class="col-md-3 col-xs-12 float-left working-padding-div">
+                    <h1 class="mdcol-working-h1-home">How we are working?</h1>
+                    <p class="mdcol-working-p-home">We help you shape your imagination.</p>
+                    <a href="About" class="second-menu-btn-home-a"><button class="mdcol-working-btn-home" color="primary" rounded>  Learn more</button></a>
+                </div>
+                @workingColDiv("fa fa-search", "Requirements Analysis", "We understand your imagination.")
+                @workingColDiv("fa fa-laptop", "Technically Implementation", "We shape your imagination into digital form.")
+                @workingColDiv("fa fa-smile-o", "Delivered to Client", "We train you to your success and gain your satisfaction.")
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script type="text/javascript">
+    function Save() {
+        var er = document.getElementById("snackbarError");
+        var s = document.getElementById("snackbarSuccess");
+        var n = document.getElementById("snakbarName");
+        var m = document.getElementById("snakbarMessage");
+        var e = document.getElementById("snakbarEmail");
+        var p = document.getElementById("snakbarPhone");
+        setTimeout(function () { er.className = er.className.replace("show", ""); }, 3000);
+        setTimeout(function () { s.className = s.className.replace("show", ""); }, 3000);
+        setTimeout(function () { n.className = n.className.replace("show", ""); }, 3000);
+        setTimeout(function () { e.className = e.className.replace("show", ""); }, 3000);
+        setTimeout(function () { m.className = m.className.replace("show", ""); }, 3000);
+        setTimeout(function () { p.className = p.className.replace("show", ""); }, 3000);
+        if ((document.getElementById("Name")).value == null || (document.getElementById("Name")).value == "") {
+            n.className = "show";
+            return;
+        }
+        else if ((document.getElementById("Message")).value == null || (document.getElementById("Message")).value == "") {
+            m.className = "show";
+            return;
+        }
+        else if ((document.getElementById("Email")).value == null || (document.getElementById("Email")).value == "") {
+            e.className = "show";
+            return;
+        }
+        else if ((document.getElementById("Phone")).value == null || (document.getElementById("Phone")).value == "") {
+            p.className = "show";
+            return;
+        } debugger
+        let url = "https://exultitsolution.com/exultitapi/email/SendMail";
+        let users = {
+            usermessage: (document.getElementById("Message")).value,
+            username: (document.getElementById("Name")).value,
+            useremail: (document.getElementById("Email")).value,
+            userphone: (document.getElementById("Phone")).value,
+            Useroptions:""
+        };
+        axios({
+            method: 'post',
+            url: url,
+            data: users
+        }).then
+            (data => {
+                s.className = "show";
+            }).catch(err =>
+                er.className = "show")
+    }
+</script>
